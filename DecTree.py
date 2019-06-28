@@ -13,11 +13,11 @@ print(boston.feature_names)
 features=boston.data
 prices=boston.target
 #获取33%的数据作为测试集
-train_fratures,test_features,train_prices,test_prices=train_test_split(features,prices,test_size=0.33,random_state=0)
+train_features,test_features,train_prices,test_prices=train_test_split(features,prices,test_size=0.33,random_state=0)
 #创建回归树
 dtr=DecisionTreeRegressor()
 #拟合构造CART回归树
-dtr.fit(train_fratures,train_prices)
+dtr.fit(train_features,train_prices)
 #预测测试集集中的房价
 predict_price=dtr.predict(test_features)
 #测试集的结果评价
